@@ -1,2 +1,2 @@
-# egemenguney
-My personal portfolio website repository.
+# egemen-guney
+Hi there! 👋
