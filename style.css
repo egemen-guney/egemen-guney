@@ -143,20 +143,33 @@ body {
 }
 
 #gradient-intro {
-    background: linear-gradient(to right, var(--primary), var(--secondary));
+    background: linear-gradient(to right, var(--primary), rgb(197, 0, 0), var(--secondary), rgb(197, 0, 0), var(--primary));
+    background-size: 200%;
+    opacity: 0;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    /* For Firefox */
-    background-clip: text;
-    color: transparent;
+    animation: fadeInDown 2s ease forwards, animate-gradient 2.4s linear 5;
 }
 
-/*
+#gradient-intro:hover {
+    animation-play-state: paused;
+}
+
+@keyframes fadeInDown {
+    to { opacity: 1; }
+}
+
+@keyframes animate-gradient {
+    to {
+        background-position: -200%;
+    }
+}
+
+
 #name-highlight {
-    color: var(--secondary);
+    cursor: default;
 }
-*/
 
 .tagline {
     font-size: 1.2rem;
