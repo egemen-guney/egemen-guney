@@ -83,11 +83,17 @@ body {
     text-decoration: none;
     color: var(--text-secondary);
     transition: all 0.25s ease;
+    cursor: pointer;
 }
 
 .navs a:hover {
     color: var(--text-primary);
     font-size: 18px;
+}
+
+.navs a:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
 }
 
 .navs a.active::after {
@@ -132,6 +138,24 @@ body {
 
 .tagline {
     font-size: 1.2rem;
+}
+
+#wave {
+    animation: wave-animation 2.5s infinite;
+    display: inline-block;
+    transform-origin: 70% 70%;
+    font-size: 3.5rem;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate(0.0deg) }
+    100% { transform: rotate(0.0deg) }
 }
 
 #about-photo {
