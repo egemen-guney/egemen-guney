@@ -55,11 +55,12 @@ body {
     display: flex;
     justify-content: space-between;
     position: sticky;
+    /* position: fixed; */
     /* position: relative; */
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 9999;
 }
 
 .nav-container {
@@ -128,6 +129,8 @@ body {
 }
 
 #home {
+    padding-left: 6rem;
+    padding-right: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,19 +142,46 @@ body {
     font-size: 2.5rem;
 }
 
+#gradient-intro {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* For Firefox */
+    background-clip: text;
+    color: transparent;
+}
+
+/*
 #name-highlight {
     color: var(--secondary);
 }
+*/
 
 .tagline {
     font-size: 1.2rem;
+    letter-spacing: 3px;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--text-primary);
+    width: 100%;
+    animation: typing 4.5s steps(35) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 #wave {
     animation: wave-animation 2.5s infinite;
     display: inline-block;
     transform-origin: 70% 70%;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 @keyframes wave-animation {
