@@ -30,13 +30,13 @@
             <div class="nav-container">
                 <nav class="navbar">
                     <ul class="navs">
-                        <li><a href="#home" class="active"><i class="fas fa-home"></i></a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#work">Work Experiences</a></li>
-                        <li><a href="#volunteer">Volunteer Experiences</a></li>
-                        <li><a href="#more">More</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" class="active" id="home-btn"><i class="fas fa-home"></i></a></li>
+                        <li><a href="#about" id="about-btn">About</a></li>
+                        <li><a href="#projects" id="projects-btn">Projects</a></li>
+                        <li><a href="#work" id="work-btn">Work Experiences</a></li>
+                        <li><a href="#volunteer" id="vol-btn">Volunteer Experiences</a></li>
+                        <li><a href="#more" id="more-btn">More</a></li>
+                        <li><a href="#contact" id="contact-btn">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -45,8 +45,8 @@
         <!-- MAIN CONTENT AREA-->
         <main class="main">
             <!-- HOME-->
-            <section id="home" class="page active">
-                <div class="about-intro">
+            <section id="home" class="page">
+                <div class="home-intro">
                     <h1 class="intro"><span id="gradient-intro">Hey there, <span id="name-highlight" title="Egg-a-man">I'm Egemen! </span></span><span id="wave">👋</span></h1>
                     <p class="tagline">A passionate student and developer.</p>
                 </div>
@@ -58,7 +58,23 @@
             </section>
 
             <!-- ABOUT -->
-            <section id="about" class="page">...</section>
+            <section id="about" class="page active">
+                <div class="about-heading">
+                    <h1>About Myself...</h1>
+                </div>
+                <div class="about-content">
+                    <p>I am an undergraduate Software Systems student at Simon Fraser University. I have been passionate about building things from the ground up ever since I was a child. 
+                    What once meant creating with LEGO bricks has evolved into building software. I have a strong passion for solving real-world problems through clean, 
+                    user-centered design and scalable software solutions. I enjoy developing strong backend architectures, building intuitive web applications, exploring 
+                    systems-level programming, and continuously learning new technologies to sharpen my skills.</p>
+                    <p>My academic journey has provided me with a solid foundation in programming, algorithms, and software engineering principles. I've led and contributed to 
+                    several projects—from full-stack web apps and autonomous robots to robust backend architectures that improve stability. Whether 
+                    working independently or as part of a team, I bring focus, adaptability, and a genuine curiosity to every challenge I face.</p>
+                    <p>Beyond code, I care deeply about clarity, collaboration, and making meaningful contributions to both the projects I take on 
+                    and the people I work with.</p>
+                    <p class="unspaced">... and as you can tell, I love the color <span style="color: red;">red</span>.</p>
+                </div>
+            </section>
 
             <!-- PROJECTS -->
             <section id="projects" class="page">...</section>
@@ -76,10 +92,16 @@
             <section id="contact" class="page">...</section>
         </main>
 
+        <!-- 
+        <div class="scroll-up">
+            <button id="scroll-up-button">scroll</button>
+        </div>
+        -->
+
         <!-- FOOTER -->
         <div class="footer">
-            <p>Posted by: Egemen Güney</p>
-            <p>Copyright &copy 2025 Egemen Güney. All rights reserved.</p>
+            <p class="unspaced">Posted by: Egemen Güney</p>
+            <p class="unspaced">Copyright &copy 2025 Egemen Güney. All rights reserved.</p>
         </div>
     </div>
     <script src="script.js"></script>
