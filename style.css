@@ -40,6 +40,8 @@ body {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .header {
@@ -97,10 +99,56 @@ body {
     border-radius: 5px;
 }
 
+/* CHECK LATER
+.navs a.active:hover::after {
+    
+}
+*/
+
 .logo {
     width: 120px;
     padding: 10px;
 } 
+
+.main {
+    padding: 10rem;
+}
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro {
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-size: 2.5rem;
+}
+
+#name-highlight {
+    color: var(--secondary);
+}
+
+.tagline {
+    font-size: 1.2rem;
+}
+
+#about-photo {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
 
 .footer {
     background-color: var(--background-secondary);
