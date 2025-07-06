@@ -301,7 +301,7 @@ p.unspaced {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 1rem;
     width: 100%;
-    max-width: 700px;
+    max-width: 750px;
     border-radius: 16px;
     margin-bottom: 12px;
     position: relative;
@@ -320,7 +320,7 @@ p.unspaced {
 }
 
 .project.left .project-title {
-    background: linear-gradient(to right, var(--primary), var(--secondary));
+    background: linear-gradient(to right, var(--primary), var(--secondary), var(--secondary));
     background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -329,7 +329,7 @@ p.unspaced {
 }
 
 .project.right .project-title {
-    background: linear-gradient(to left, var(--primary), var(--secondary));
+    background: linear-gradient(to left, var(--primary), var(--secondary), var(--secondary));
     background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -349,6 +349,14 @@ p.unspaced {
 
 .project-content p {
     color: var(--text-primary);
+}
+
+.fas.fa-chevron-right, .fas.fa-chevron-left {
+    color: var(--primary);
+}
+
+#skill-highlight {
+    color: var(--secondary);
 }
 
 .page {
