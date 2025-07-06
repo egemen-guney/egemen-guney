@@ -179,7 +179,7 @@ p.unspaced {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: fadeInDown 1.75s ease forwards, animate-gradient 2.4s linear infinite;
+    animation: fadeInDown 2.25s ease forwards, animate-gradient 2.4s linear infinite;
 }
 
 #gradient-intro:hover {
@@ -290,28 +290,33 @@ p.unspaced {
 
 .projects-content-container {
     display: flex;
-    max-width: 900px;
+    max-width: 1000px;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .project {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 1rem;
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     border-radius: 16px;
     margin-bottom: 12px;
+    position: relative;
 }
 
 .project.left {
     text-align: left;
-    justify-content: flex-start;
+    align-self: flex-start;
+    margin-right: auto;
 }
 
 .project.right {
     text-align: right;
-    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto;
 }
 
 .project.left .project-title {
