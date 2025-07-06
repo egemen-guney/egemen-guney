@@ -100,6 +100,7 @@ p.unspaced {
     color: var(--text-secondary);
     transition: all 0.25s ease;
     cursor: pointer;
+    position: relative;
 }
 
 .navs a:hover {
@@ -116,13 +117,26 @@ p.unspaced {
     color: var(--primary);
 }
 
+.navs a::after {
+    transform: scaleX(0);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform-origin: center;
+}
+
 .navs a.active::after {
+    transform-origin: center;
     content: "";
+    position: absolute;
+    margin-top: 1px;
+    left: 0;
     display: block;
     background: linear-gradient(to right, var(--primary), var(--secondary));
     height: 3px;
     width: 100%;
     border-radius: 5px;
+    transform: scaleX(1);
+    opacity: 1;
 }
 
 /* CHECK LATER
