@@ -248,7 +248,7 @@ p.unspaced {
     padding-bottom: calc(2rem + 80px);
 }
 
-.about-heading, .projects-heading, .work-heading {
+.about-heading, .projects-heading, .work-heading, .vol-heading {
     font-size: 1.8rem;
     color: var(--primary);
     margin-bottom: 20px;
@@ -284,7 +284,7 @@ p.unspaced {
 }
 */
 
-.projects-content-container {
+.projects-content-container, .vol-content-container {
     display: flex;
     max-width: 1000px;
     width: 100%;
@@ -293,7 +293,7 @@ p.unspaced {
     position: relative;
 }
 
-.project {
+.project, .vol {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 1rem;
     width: 100%;
@@ -303,19 +303,19 @@ p.unspaced {
     position: relative;
 }
 
-.project.left, .job.left {
+.project.left, .job.left, .vol.left {
     text-align: left;
     align-self: flex-start;
     margin-right: auto;
 }
 
-.project.right, .job.right {
+.project.right, .job.right, .vol.right {
     text-align: right;
     align-self: flex-end;
     margin-left: auto;
 }
 
-.project.left .project-title, .job.left .job-title {
+.project.left .project-title, .job.left .job-title, .vol.left .vol-title {
     background: linear-gradient(to right, var(--primary), var(--secondary), var(--secondary));
     background-size: 100%;
     background-clip: text;
@@ -324,7 +324,7 @@ p.unspaced {
     margin-bottom: 12px;
 }
 
-.project.right .project-title, .job.right .job-title {
+.project.right .project-title, .job.right .job-title, .vol.right .vol-title {
     background: linear-gradient(to left, var(--primary), var(--secondary), var(--secondary));
     background-size: 100%;
     background-clip: text;
@@ -333,7 +333,7 @@ p.unspaced {
     margin-bottom: 12px;
 }
 
-.project-title::after, .job-title::after {
+.project-title::after, .job-title::after, .vol-title::after {
     content: "";
     display: block;
     background-color: var(--background-primary);
@@ -343,7 +343,7 @@ p.unspaced {
     margin-top: 2px;
 }
 
-.project-content p, .job-content p {
+.project-content p, .job-content p, .vol-content p {
     color: var(--text-primary);
 }
 
@@ -401,6 +401,15 @@ p.unspaced {
     -webkit-text-fill-color: transparent;
     margin-bottom: 12px;
     text-align: center;
+}
+
+#volunteer {
+    padding-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: calc(2rem + 80px);
+    width: 100%;
 }
 
 .page {
