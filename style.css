@@ -284,7 +284,7 @@ p.unspaced {
 }
 */
 
-.projects-content-container, .work-content-container {
+.projects-content-container {
     display: flex;
     max-width: 1000px;
     width: 100%;
@@ -293,7 +293,7 @@ p.unspaced {
     position: relative;
 }
 
-.project, .job {
+.project {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 1rem;
     width: 100%;
@@ -372,6 +372,34 @@ p.unspaced {
     justify-content: center;
     padding-bottom: calc(2rem + 80px);
     width: 100%;
+}
+
+.work-content-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.job {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1rem;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 16px;
+    margin-bottom: 12px;
+}
+
+.job .job-title {
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+    text-align: center;
 }
 
 .page {
