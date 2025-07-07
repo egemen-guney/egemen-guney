@@ -390,6 +390,7 @@ p.unspaced {
     max-width: 750px;
     border-radius: 16px;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .job .job-title {
