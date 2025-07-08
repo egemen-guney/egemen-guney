@@ -51,7 +51,7 @@ emailjs.init({ publicKey: "PmaH2bNkkVrF-CkuY", });
 
 // LISTENERS
 window.addEventListener("DOMContentLoaded", () => {
-    const activePage = localStorage.getItem("activePage") || "home";
+    const activePage = sessionStorage.getItem("activePage") || "home";
 
     Object.values(buttons).forEach(button => button.classList.remove("active"));
     Object.values(sections).forEach(section => section.classList.remove("active"));
@@ -82,7 +82,7 @@ contactSubmitButton.addEventListener("click", function(event) {
 
 // FUNC.S
 function setActivePage(page) {
-    localStorage.setItem("activePage", page);
+    sessionStorage.setItem("activePage", page);
 
     Object.values(buttons).forEach(button => button.classList.remove("active"));
     Object.values(sections).forEach(section => section.classList.remove("active"));
