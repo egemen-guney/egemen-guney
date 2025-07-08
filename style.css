@@ -264,6 +264,8 @@ p.unspaced {
     text-align: center;
     border-radius: 16px;
     line-height: 2rem;
+    animation: fadeInUp 0.7s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0, 0.4);
 }
 
 #projects {
@@ -566,6 +568,7 @@ input::placeholder, textarea::placeholder {
     border-radius: 16px;
     line-height: normal;
     animation: fadeInUp 0.7s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0, 0.4);
 }
 
 .interests-heading, .summary-heading {
