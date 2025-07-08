@@ -13,161 +13,63 @@ const workSec = document.getElementById("work");
 const volSec = document.getElementById("volunteer");
 const moreSec = document.getElementById("more");
 const contactSec = document.getElementById("contact");
+
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const phoneInput = document.getElementById("phone");
+const subjectInput = document.getElementById("subject");
+const msgInput = document.getElementById("message");
+const contactSubmitButton = document.getElementById("contact-submit-btn");
+
+const buttons = {
+    home: homeButton,
+    about: aboutButton,
+    projects: projectsButton,
+    work: workButton,
+    volunteer: volButton,
+    more: moreButton,
+    contact: contactButton
+};
+const sections = {
+    home: homeSec,
+    about: aboutSec,
+    projects: projectsSec,
+    work: workSec,
+    volunteer: volSec,
+    more: moreSec,
+    contact: contactSec
+};
+
 //////////////////////////////////////////////////////////////
 //----------------------------------------------------------//
 //////////////////////////////////////////////////////////////
-homeButton.addEventListener('click', () => {
-    homeButton.classList.remove("active");
-    aboutButton.classList.remove("active");
-    projectsButton.classList.remove("active");
-    workButton.classList.remove("active");
-    volButton.classList.remove("active");
-    moreButton.classList.remove("active");
-    contactButton.classList.remove("active");
-    homeButton.classList.add("active");
 
-    homeSec.classList.remove("active");
-    aboutSec.classList.remove("active");
-    projectsSec.classList.remove("active");
-    workSec.classList.remove("active");
-    volSec.classList.remove("active");
-    moreSec.classList.remove("active");
-    contactSec.classList.remove("active");
-    homeSec.classList.add("active");
-})
-aboutButton.addEventListener('click', () => {
-    homeButton.classList.remove("active");
-    aboutButton.classList.remove("active");
-    projectsButton.classList.remove("active");
-    workButton.classList.remove("active");
-    volButton.classList.remove("active");
-    moreButton.classList.remove("active");
-    contactButton.classList.remove("active");
-    aboutButton.classList.add("active");
-
-    homeSec.classList.remove("active");
-    aboutSec.classList.remove("active");
-    projectsSec.classList.remove("active");
-    workSec.classList.remove("active");
-    volSec.classList.remove("active");
-    moreSec.classList.remove("active");
-    contactSec.classList.remove("active");
-    aboutSec.classList.add("active");
-})
-projectsButton.addEventListener('click', () => {
-    homeButton.classList.remove("active");
-    aboutButton.classList.remove("active");
-    projectsButton.classList.remove("active");
-    workButton.classList.remove("active");
-    volButton.classList.remove("active");
-    moreButton.classList.remove("active");
-    contactButton.classList.remove("active");
-    projectsButton.classList.add("active");
-
-    homeSec.classList.remove("active");
-    aboutSec.classList.remove("active");
-    projectsSec.classList.remove("active");
-    workSec.classList.remove("active");
-    volSec.classList.remove("active");
-    moreSec.classList.remove("active");
-    contactSec.classList.remove("active");
-    projectsSec.classList.add("active");
-})
-workButton.addEventListener('click', () => {
-    homeButton.classList.remove("active");
-    aboutButton.classList.remove("active");
-    projectsButton.classList.remove("active");
-    workButton.classList.remove("active");
-    volButton.classList.remove("active");
-    moreButton.classList.remove("active");
-    contactButton.classList.remove("active");
-    workButton.classList.add("active");
-
-    homeSec.classList.remove("active");
-    aboutSec.classList.remove("active");
-    projectsSec.classList.remove("active");
-    workSec.classList.remove("active");
-    volSec.classList.remove("active");
-    moreSec.classList.remove("active");
-    contactSec.classList.remove("active");
-    workSec.classList.add("active");
-})
-volButton.addEventListener('click', () => {
-    homeButton.classList.remove("active");
-    aboutButton.classList.remove("active");
-    projectsButton.classList.remove("active");
-    workButton.classList.remove("active");
-    volButton.classList.remove("active");
-    moreButton.classList.remove("active");
-    contactButton.classList.remove("active");
-    volButton.classList.add("active");
-
-    homeSec.classList.remove("active");
-    aboutSec.classList.remove("active");
-    projectsSec.classList.remove("active");
-    workSec.classList.remove("active");
-    volSec.classList.remove("active");
-    moreSec.classList.remove("active");
-    contactSec.classList.remove("active");
-    volSec.classList.add("active");
-})
-moreButton.addEventListener('click', () => {
-    homeButton.classList.remove("active");
-    aboutButton.classList.remove("active");
-    projectsButton.classList.remove("active");
-    workButton.classList.remove("active");
-    volButton.classList.remove("active");
-    moreButton.classList.remove("active");
-    contactButton.classList.remove("active");
-    moreButton.classList.add("active");
-
-    homeSec.classList.remove("active");
-    aboutSec.classList.remove("active");
-    projectsSec.classList.remove("active");
-    workSec.classList.remove("active");
-    volSec.classList.remove("active");
-    moreSec.classList.remove("active");
-    contactSec.classList.remove("active");
-    moreSec.classList.add("active");
-})
-contactButton.addEventListener('click', () => {
-    homeButton.classList.remove("active");
-    aboutButton.classList.remove("active");
-    projectsButton.classList.remove("active");
-    workButton.classList.remove("active");
-    volButton.classList.remove("active");
-    moreButton.classList.remove("active");
-    contactButton.classList.remove("active");
-    contactButton.classList.add("active");
-
-    homeSec.classList.remove("active");
-    aboutSec.classList.remove("active");
-    projectsSec.classList.remove("active");
-    workSec.classList.remove("active");
-    volSec.classList.remove("active");
-    moreSec.classList.remove("active");
-    contactSec.classList.remove("active");
-    contactSec.classList.add("active");
-})
-
-/*
+// LISTENERS
 window.addEventListener("DOMContentLoaded", () => {
-    homeButton.classList.remove("active");
-    aboutButton.classList.remove("active");
-    projectsButton.classList.remove("active");
-    workButton.classList.remove("active");
-    volButton.classList.remove("active");
-    moreButton.classList.remove("active");
-    contactButton.classList.remove("active");
-    homeButton.classList.add("active");
+    const activePage = localStorage.getItem("activePage") || "home";
 
-    homeSec.classList.remove("active");
-    aboutSec.classList.remove("active");
-    projectsSec.classList.remove("active");
-    workSec.classList.remove("active");
-    volSec.classList.remove("active");
-    moreSec.classList.remove("active");
-    contactSec.classList.remove("active");
-    homeSec.classList.add("active");
+    Object.values(buttons).forEach(button => button.classList.remove("active"));
+    Object.values(sections).forEach(section => section.classList.remove("active"));
+
+    buttons[activePage].classList.add("active");
+    sections[activePage].classList.add("active");
 });
-*/
+
+homeButton.addEventListener('click', () => { setActivePage("home"); });
+aboutButton.addEventListener('click', () => { setActivePage("about"); });
+projectsButton.addEventListener('click', () => { setActivePage("projects"); });
+workButton.addEventListener('click', () => { setActivePage("work"); });
+volButton.addEventListener('click', () => { setActivePage("volunteer"); });
+moreButton.addEventListener('click', () => { setActivePage("more"); });
+contactButton.addEventListener('click', () => { setActivePage("contact"); });
+
+// FUNC.S
+function setActivePage(page) {
+    localStorage.setItem("activePage", page);
+
+    Object.values(buttons).forEach(button => button.classList.remove("active"));
+    Object.values(sections).forEach(section => section.classList.remove("active"));
+
+    buttons[page].classList.add("active");
+    sections[page].classList.add("active");
+}
