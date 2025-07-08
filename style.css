@@ -543,6 +543,10 @@ input::placeholder, textarea::placeholder {
     color: var(--secondary);
 }
 
+#about, #projects, #work, #volunteer, #more, #contact {
+    scroll-margin-top: calc(1rem + 95px);
+}
+
 #more {
     padding-top: 1rem;
     flex-direction: column;
@@ -561,6 +565,7 @@ input::placeholder, textarea::placeholder {
     max-width: 1025px;
     border-radius: 16px;
     line-height: normal;
+    animation: fadeInUp 0.7s ease;
 }
 
 .interests-heading, .summary-heading {

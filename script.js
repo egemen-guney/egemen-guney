@@ -13,7 +13,9 @@ const workSec = document.getElementById("work");
 const volSec = document.getElementById("volunteer");
 const moreSec = document.getElementById("more");
 const contactSec = document.getElementById("contact");
-
+//////////////////////////////////////////////////////////////
+//----------------------------------------------------------//
+//////////////////////////////////////////////////////////////
 homeButton.addEventListener('click', () => {
     homeButton.classList.remove("active");
     aboutButton.classList.remove("active");
@@ -147,3 +149,25 @@ contactButton.addEventListener('click', () => {
     contactSec.classList.remove("active");
     contactSec.classList.add("active");
 })
+
+/*
+window.addEventListener("DOMContentLoaded", () => {
+    homeButton.classList.remove("active");
+    aboutButton.classList.remove("active");
+    projectsButton.classList.remove("active");
+    workButton.classList.remove("active");
+    volButton.classList.remove("active");
+    moreButton.classList.remove("active");
+    contactButton.classList.remove("active");
+    homeButton.classList.add("active");
+
+    homeSec.classList.remove("active");
+    aboutSec.classList.remove("active");
+    projectsSec.classList.remove("active");
+    workSec.classList.remove("active");
+    volSec.classList.remove("active");
+    moreSec.classList.remove("active");
+    contactSec.classList.remove("active");
+    homeSec.classList.add("active");
+});
+*/
