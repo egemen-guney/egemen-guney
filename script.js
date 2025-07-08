@@ -47,11 +47,7 @@ const sections = {
 emailjs.init({ publicKey: "PmaH2bNkkVrF-CkuY", });
 
 // VAR.S
-const nameMsg = nameInput.value;
-const emailMsg = emailInput.value;
-const phoneMsg = phoneInput.value;
-const subjectMsg = subjectInput.value;
-const contentMsg = msgInput.value;
+
 
 // LISTENERS
 window.addEventListener("DOMContentLoaded", () => {
@@ -74,6 +70,12 @@ contactButton.addEventListener('click', () => { setActivePage("contact"); });
 
 contactSubmitButton.addEventListener("click", function(event) {
     event.preventDefault();
+
+    const nameMsg = nameInput.value;
+    const emailMsg = emailInput.value;
+    const phoneMsg = phoneInput.value;
+    const subjectMsg = subjectInput.value;
+    const contentMsg = msgInput.value;
 
     sendMsg(nameMsg, emailMsg, phoneMsg, subjectMsg, contentMsg);
 });
