@@ -44,6 +44,15 @@ const sections = {
 //----------------------------------------------------------//
 //////////////////////////////////////////////////////////////
 
+emailjs.init({ publicKey: "PmaH2bNkkVrF-CkuY", });
+
+// VAR.S
+const nameMsg = nameInput.value;
+const emailMsg = emailInput.value;
+const phoneMsg = phoneInput.value;
+const subjectMsg = subjectInput.value;
+const contentMsg = msgInput.value;
+
 // LISTENERS
 window.addEventListener("DOMContentLoaded", () => {
     const activePage = localStorage.getItem("activePage") || "home";
@@ -63,6 +72,12 @@ volButton.addEventListener('click', () => { setActivePage("volunteer"); });
 moreButton.addEventListener('click', () => { setActivePage("more"); });
 contactButton.addEventListener('click', () => { setActivePage("contact"); });
 
+contactSubmitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    sendMsg(nameMsg, emailMsg, phoneMsg, subjectMsg, contentMsg);
+});
+
 // FUNC.S
 function setActivePage(page) {
     localStorage.setItem("activePage", page);
@@ -72,4 +87,25 @@ function setActivePage(page) {
 
     buttons[page].classList.add("active");
     sections[page].classList.add("active");
+}
+
+function sendMsg(nameMsg, emailMsg, phoneMsg, subjectMsg, contentMsg) {
+    const serviceID = "service_zsw7tz5";
+    const templateID = "template_29lnrq9";
+
+    const templateParams = {
+        name: nameMsg,
+        email: emailMsg,
+        phone: phoneMsg,
+        subject: subjectMsg,
+        message: contentMsg
+    };
+
+    emailjs.send(serviceID, templateID, templateParams)
+    .then(response => {
+        alert("Message sent successfully!");
+    })
+    .catch(error => {
+        alert("Unable to send message.\n" + error.text);
+    });
 }
