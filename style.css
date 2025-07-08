@@ -607,6 +607,10 @@ input::placeholder, textarea::placeholder {
     margin-bottom: 1rem;
 }
 
+.interest-highlight {
+    color: var(--secondary);
+}
+
 .where {
     text-align: right;
     align-self: flex-end;
