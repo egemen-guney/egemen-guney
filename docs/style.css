@@ -646,11 +646,11 @@ input::placeholder, textarea::placeholder {
     width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     p {
         margin-bottom: 1.2rem;
     }
-    
+
     .container {
         background-color: rgba(206, 206, 206, 0.95);
         position: relative;
@@ -1170,5 +1170,15 @@ input::placeholder, textarea::placeholder {
         padding: 1px;
         font-size: 0.75rem;
         width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .tagline {
+        font-size: 0.8rem;
+    }
+
+    .intro {
+        font-size: 1.5rem;
     }
 }
