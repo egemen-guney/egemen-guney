@@ -77,7 +77,12 @@ contactSubmitButton.addEventListener("click", function(event) {
     const subjectMsg = subjectInput.value;
     const contentMsg = msgInput.value;
 
-    sendMsg(nameMsg, emailMsg, phoneMsg, subjectMsg, contentMsg);
+    if(nameMsg === "" || emailMsg === "" || subjectMsg === "" || contentMsg === "") {
+        alert("Please make sure you have filled all the required fields.");
+        return; // do nothing if the required fields are empty.
+    } else {
+        sendMsg(nameMsg, emailMsg, phoneMsg, subjectMsg, contentMsg);
+    }
 });
 
 // FUNC.S
