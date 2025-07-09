@@ -637,7 +637,7 @@ input::placeholder, textarea::placeholder {
     width: 100%;
 }
 
-@media (max-width: 600) {
+@media (max-width: 768px) {
     p {
         margin-bottom: 1rem;
     }
