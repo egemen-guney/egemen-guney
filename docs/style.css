@@ -637,10 +637,22 @@ input::placeholder, textarea::placeholder {
     width: 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
         background-attachment: scroll;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .about-heading, .projects-heading, .work-heading, .vol-heading, .more-heading, .contact-heading {
+        font-size: 1.5rem;
+    }
+
+    .project-title, .job-title, .vol-title, .interests-heading, .where-heading, .summary-heading {
+        font-size: 1.25rem;
     }
 
     .header {
