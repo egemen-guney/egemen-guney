@@ -646,6 +646,119 @@ input::placeholder, textarea::placeholder {
     width: 100%;
 }
 
+@media (max-width: 1242px) {
+    .intro {
+        font-size: 2.25rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+
+    #wave {
+        font-size: 2.75rem;
+    }
+
+    #about-photo {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .intro {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    #wave {
+        font-size: 2.5rem;
+    }
+
+    #about-photo {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .intro {
+        font-size: 1.75rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    #wave {
+        font-size: 2rem;
+    }
+
+    #about-photo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 925px) {
+    .tagline {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    #wave {
+        font-size: 2rem;
+    }
+
+    #about-photo {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media (max-width: 880px) {
+    .intro {
+        font-size: 1.6rem;
+    }
+
+    #wave {
+        font-size: 1.75rem;
+    }
+
+    #about-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 825px) {
+    #about-photo {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media (max-width: 805px) {
+    .intro {
+        font-size: 1.4rem;
+    }
+
+    .tagline {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    #wave {
+        font-size: 1.6rem;
+    }
+}
+
 @media (max-width: 768px) {
     p {
         margin-bottom: 1.2rem;
