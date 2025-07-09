@@ -14,6 +14,8 @@
     --secondary: red;
     --background-primary: #cecece;
     --background-secondary: #ddd;
+
+    --main-height: calc(100vh - 130px);
 }
 
 body {
@@ -56,15 +58,14 @@ p.unspaced {
 
 .header {
     text-align: center;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--background-primary);
     align-items: space-between;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    /* position: fixed; */
-    /* position: relative; */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -145,18 +146,23 @@ p.unspaced {
 } 
 
 .main {
-    padding-left: 11.5rem;
-    padding-right: 11.5rem;
-    height: calc(100vh - 130px);
+    padding-left: 6rem;
+    padding-right: 6rem;
+    height: var(--main-height);
+    margin-top: 80px;
+    margin-bottom: 50px;
+    /* justify-content: center; */
+    /* align-items: center; */
     /* flex-direction: column; */
 }
 
 #home {
     padding-left: 4.5rem;
-    padding-right: 4.5rem;
-    padding-top: 10rem;
+    padding-right: 4.75rem;
+    height: var(--main-height);
     /* display: flex; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -241,14 +247,16 @@ p.unspaced {
 }
 
 #about {
-    padding-top: 1rem;
+    padding-top: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: calc(1rem + 80px);
+    /* height: var(--main-height); */
+    padding-bottom: 5rem;
 }
 
 .about-heading, .projects-heading, .work-heading, .vol-heading, .contact-heading, .more-heading {
+    margin-top: 20px;
     font-size: 1.8rem;
     color: var(--primary);
     margin-bottom: 20px;
@@ -269,11 +277,11 @@ p.unspaced {
 }
 
 #projects {
-    padding-top: 1rem;
+    padding-top: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: calc(1rem + 80px);
+    padding-bottom: 5rem;
     width: 100%;
 }
 
@@ -359,11 +367,11 @@ p.unspaced {
 }
 
 #work {
-    padding-top: 1rem;
+    padding-top: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: calc(1rem + 80px);
+    /* padding-bottom: 5rem; not necessary as of now */
     width: 100%;
 }
 
@@ -397,20 +405,20 @@ p.unspaced {
 }
 
 #volunteer {
-    padding-top: 1rem;
+    padding-top: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: calc(1rem + 80px);
+    padding-bottom: 5rem;
     width: 100%;
 }
 
 #contact {
-    padding-top: 1rem;
+    padding-top: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: calc(1rem + 80px);
+    padding-bottom: 5rem;
     width: 100%;
 }
 
@@ -550,11 +558,11 @@ input::placeholder, textarea::placeholder {
 }
 
 #more {
-    padding-top: 1rem;
+    padding-top: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: calc(1rem + 80px);
+    padding-bottom: 5rem;
     width: 100%;
 }
 
@@ -699,7 +707,7 @@ input::placeholder, textarea::placeholder {
 
     .main {
         padding: 1.5rem;
-        height: auto;
+        /* height: calc(100vh - 130px); */
         flex-direction: column;
     }
 
