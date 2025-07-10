@@ -17,7 +17,7 @@
 
     --main-height: calc(100vh - 130px);
     --main-height-600: calc(100vh - 163px);
-    --main-height-400: calc(100vh - 168px);
+    --main-height-400: calc(100vh - 106px);
 }
 
 body {
@@ -1184,7 +1184,7 @@ input::placeholder, textarea::placeholder {
     }
 }
 
-@media (max-width: 389px) {
+@media (max-width: 390px) {
     .logo {
         width: 30px;
         height: auto;
@@ -1214,8 +1214,12 @@ input::placeholder, textarea::placeholder {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         height: var(--main-height-400);
-        margin-top: 141px;
+        margin-top: 79px;
         margin-bottom: 27px;
+    }
+
+    .home {
+        height: var(--main-height-400);
     }
 
     .tagline {
