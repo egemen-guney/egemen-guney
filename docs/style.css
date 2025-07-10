@@ -16,7 +16,7 @@
     --background-secondary: #ddd;
 
     --main-height: calc(100vh - 130px);
-    --main-height-600: calc(100vh - 163px);
+    --main-height-600: calc(100vh - 80px);
     --main-height-400: calc(100vh - 106px);
 }
 
@@ -866,7 +866,7 @@ input::placeholder, textarea::placeholder {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         height: var(--main-height-600);
-        margin-top: 136px;
+        margin-top: 53px;
         margin-bottom: 27px;
         /* justify-content: center; */
         /* align-items: center; */
@@ -879,7 +879,6 @@ input::placeholder, textarea::placeholder {
         height: var(--main-height-600);
         /* display: flex; */
         /* justify-content: space-between; */
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1181,6 +1180,28 @@ input::placeholder, textarea::placeholder {
         padding: 1px;
         font-size: 0.6rem;
         width: 100%;
+    }
+}
+
+@media (max-width: 742px) {
+    .navs {
+        gap:1rem;
+        font-size: 0.8rem;
+    }
+
+    .navs a:hover {
+        font-size: 0.8rem;
+    }
+
+    .navs a.active {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 642px) {
+    .main {
+        height: calc(100vh - 110px);
+        margin-top: 83px;
     }
 }
 
