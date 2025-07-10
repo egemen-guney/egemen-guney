@@ -16,7 +16,8 @@
     --background-secondary: #ddd;
 
     --main-height: calc(100vh - 130px);
-    --main-height-600: calc(100vh - 212px);
+    --main-height-600: calc(100vh - 163px);
+    --main-height-400: calc(100vh - 168px);
 }
 
 body {
@@ -761,7 +762,7 @@ input::placeholder, textarea::placeholder {
 
 @media (max-width: 768px) {
     p {
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.15rem;
     }
 
     .container {
@@ -788,10 +789,7 @@ input::placeholder, textarea::placeholder {
         flex-direction: column;
         justify-content: space-between;
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
+        /* position: absolute; */
     }
 
     .nav-container {
@@ -809,26 +807,21 @@ input::placeholder, textarea::placeholder {
     }
 
     .navs {
-        list-style-type: none;
-        flex: 1;
+        /* flex: 1; */
         text-align: center;
         display: flex;
-        gap: 4px;
+        flex-wrap: wrap;
+        padding-top: 2px;
+        gap: 1.5rem;
         font-size: 0.9rem;
-        flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .navs a {
-        text-decoration: none;
-        color: var(--text-secondary);
-        transition: all 0.25s ease;
-        cursor: pointer;
         position: relative;
     }
 
     .navs a:hover {
-        color: var(--text-primary);
         font-size: 0.9rem;
     }
 
@@ -838,7 +831,6 @@ input::placeholder, textarea::placeholder {
     }
 
     .navs a.active {
-        color: var(--primary);
         font-size: 0.9rem;
     }
 
@@ -874,8 +866,8 @@ input::placeholder, textarea::placeholder {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         height: var(--main-height-600);
-        margin-top: 180px;
-        margin-bottom: 32px;
+        margin-top: 136px;
+        margin-bottom: 27px;
         /* justify-content: center; */
         /* align-items: center; */
         /* flex-direction: column; */
@@ -909,32 +901,16 @@ input::placeholder, textarea::placeholder {
         font-size: 1.75rem;
     }
 
-    #gradient-intro {
-        background: linear-gradient(to right, var(--primary), rgb(197, 0, 0), var(--secondary), rgb(197, 0, 0), var(--primary));
-        background-size: 200%;
-        opacity: 0;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: fadeInDown 2.25s ease forwards, animate-gradient 2.8s linear infinite;
-    }
-
     .tagline {
         font-size: 0.9rem;
         letter-spacing: 2px;
-        font-family: monospace;
         margin-bottom: 0;
         white-space: nowrap;
         overflow: hidden;
-        border-right: 2px solid var(--text-primary);
         width: 100%;
-        animation: typing 4.5s steps(35) forwards, blink 0.75s step-end infinite;
     }
 
     #wave {
-        animation: wave-animation 2.5s infinite;
-        display: inline-block;
-        transform-origin: 70% 70%;
         font-size: 2rem;
     }
 
@@ -957,23 +933,15 @@ input::placeholder, textarea::placeholder {
 
     .about-heading, .projects-heading, .work-heading, .vol-heading, .contact-heading, .more-heading {
         margin-top: 10px;
-        font-size: 1.5rem;
-        color: var(--primary);
+        font-size: 1.4rem;
         margin-bottom: 10px;
-        text-align: center;
     }
 
     .about-content {
-        background-color: rgba(255, 255, 255, 0.4);
-        color: var(--text-primary);
         padding: 1rem;
         width: 100%;
-        text-align: center;
-        border-radius: 16px;
-        line-height: 1.75rem;
+        line-height: 1.7rem;
         font-size: 0.9rem;
-        animation: fadeInUp 0.7s ease;
-        box-shadow: 0 8px 16px rgba(0,0,0, 0.4);
     }
 
     #projects {
@@ -1004,7 +972,7 @@ input::placeholder, textarea::placeholder {
     }
 
     .project-title {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .project-content {
@@ -1012,27 +980,14 @@ input::placeholder, textarea::placeholder {
     }
 
     .project.left .project-title, .job.left .job-title, .vol.left .vol-title {
-        background: linear-gradient(to right, var(--primary), var(--secondary), var(--secondary));
-        background-size: 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         margin-bottom: 12px;
     }
 
     .project.right .project-title, .job.right .job-title, .vol.right .vol-title {
-        background: linear-gradient(to left, var(--primary), var(--secondary), var(--secondary));
-        background-size: 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         margin-bottom: 12px;
     }
 
     .project-title::after, .job-title::after, .vol-title::after {
-        content: "";
-        display: block;
-        background-color: var(--background-primary);
         height: 2px;
         width: 100%;
         border-radius: 5px;
@@ -1058,7 +1013,6 @@ input::placeholder, textarea::placeholder {
     }
 
     .job {
-        background-color: rgba(255, 255, 255, 0.4);
         padding: 1rem;
         width: 100%;
         max-width: 750px;
@@ -1068,13 +1022,8 @@ input::placeholder, textarea::placeholder {
     }
 
     .job .job-title {
-        background: linear-gradient(to bottom, var(--primary), var(--secondary));
-        background-size: 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         margin-bottom: 12px;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         text-align: center;
     }
 
@@ -1092,7 +1041,7 @@ input::placeholder, textarea::placeholder {
     }
 
     .vol-title {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .vol-content {
@@ -1108,28 +1057,20 @@ input::placeholder, textarea::placeholder {
         width: 100%;
     }
 
-    .input-group, .message-field i {
-        color: var(--primary);
-    }
-
     .form-container p {
         color: var(--text-primary);
+        margin-bottom: 1rem;
         font-size: 1rem;
     }
 
     .form-container {
-        background-color: rgba(255, 255, 255, 0.4);
         border-radius: 16px;
-        padding: 2rem;
-        box-shadow: 0 8px 16px rgba(0,0,0, 0.4);
-        animation: fadeInUp 0.7s ease;
+        padding: 1rem 2rem;
     }
 
     .input-group {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .input-field i, .message-field i {
@@ -1138,10 +1079,6 @@ input::placeholder, textarea::placeholder {
         left: 16px;
         transform: translateY(-50%);
         font-size: 1.1rem;
-    }
-
-    .message-field i{
-        top: 25px;
     }
 
     #contact input, #contact textarea {
@@ -1158,7 +1095,7 @@ input::placeholder, textarea::placeholder {
     #contact textarea {
         height: 80px;
         resize: none;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     #contact input:focus, #contact textarea:focus {
@@ -1167,31 +1104,11 @@ input::placeholder, textarea::placeholder {
         box-shadow: 0 0 0 2px rgba(255,0,0, 0.33); 
     }
 
-    input::placeholder, textarea::placeholder {
-        color: var(--text-secondary);
-    }
-
     #contact-submit-btn {
-        background: linear-gradient(45deg, var(--primary), var(--secondary));
-        color: var(--text-tertiary);
-        border-radius: 8px;
-        border: none;
-        font-weight: 600;
-        font-size: 1rem;
-        padding: 16px 32px;
-        cursor: pointer;
+        font-size: 0.95rem;
+        padding: 12px 24px;
         width: 100%;
         transition: all 0.4s ease;
-    }
-
-    #contact-submit-btn:hover {
-        transform: translateY(-7px);
-        color: white;
-        box-shadow: 0 4px 12px rgba(255,0,0, 0.75); 
-    }
-
-    #contact-submit-btn:active {
-        transform: translateY(0);
     }
 
     .contact-btn-content {
@@ -1202,8 +1119,8 @@ input::placeholder, textarea::placeholder {
     }
 
     .contact-info {
-        margin-top: 20px;
-        padding-top: 20px;
+        margin-top: 15px;
+        padding-top: 1rem;
         border-top: 2px solid var(--background-primary);
         display: flex;
         justify-content: space-evenly;
@@ -1238,23 +1155,13 @@ input::placeholder, textarea::placeholder {
     }
 
     .interests-heading, .summary-heading {
-        background: linear-gradient(to right, var(--primary), var(--secondary), var(--secondary));
-        background-size: 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         margin-bottom: 12px;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .where-heading {
-        background: linear-gradient(to left, var(--primary), var(--secondary), var(--secondary));
-        background-size: 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         margin-bottom: 12px;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .more-container p {
@@ -1262,9 +1169,6 @@ input::placeholder, textarea::placeholder {
     }
 
     .interests::after, .where::after {
-        content: "";
-        display: block;
-        background-color: var(--background-primary);
         height: 2px;
         width: 100%;
         border-radius: 5px;
@@ -1274,24 +1178,61 @@ input::placeholder, textarea::placeholder {
     }
 
     .footer {
-        background-color: var(--background-secondary);
-        border-top: 1px solid var(--background-primary);
-        color: var(--text-secondary);
-        text-align: center;
-        position: fixed;
-        bottom: 0;
         padding: 1px;
-        font-size: 0.75rem;
+        font-size: 0.6rem;
         width: 100%;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 389px) {
+    .logo {
+        width: 30px;
+        height: auto;
+        padding: 4px;
+    }
+
+    .navs {
+        /* flex: 1; */
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 2px;
+        gap: 0.97rem;
+        font-size: 0.8rem;
+        justify-content: center;
+    }
+
+    .navs a:hover {
+        font-size: 0.8rem;
+    }
+
+    .navs a.active {
+        font-size: 0.8rem;
+    }
+
+    .main {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        height: var(--main-height-400);
+        margin-top: 141px;
+        margin-bottom: 27px;
+    }
+
     .tagline {
         font-size: 0.8rem;
     }
 
     .intro {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .tagline {
+        font-size: 0.7rem;
+    }
+
+    .intro {
+        font-size: 1.4rem;
     }
 }
