@@ -46,9 +46,6 @@ const sections = {
 
 emailjs.init({ publicKey: "PmaH2bNkkVrF-CkuY", });
 
-// VAR.S
-
-
 // LISTENERS
 window.addEventListener("DOMContentLoaded", () => {
     const activePage = sessionStorage.getItem("activePage") || "home";
@@ -58,6 +55,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
     buttons[activePage].classList.add("active");
     sections[activePage].classList.add("active");
+});
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // prevent default jump and URL change
+
+      const targetId = this.getAttribute('data-target');
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
 });
 
 homeButton.addEventListener('click', () => { setActivePage("home"); });
