@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Currency Converter by Egemen Güney - Convert between hundreds of currencies!">
+    <meta name="keywords" content="currency, converter, api, finance">
+    <meta name="author" content="Egemen Güney">
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-icon" href="images/icons/apple-touch-icon.png" type="image/x-icon">
+    <link rel="icon" href="images/icons/android-chrome-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="images/icons/android-chrome-512x512.png" type="image/png" sizes="512x512">
+    <title>Currency Converter by Egemen Güney</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1> Currency Converter by <span id="name-highlight">Egemen Güney</span></h1>
+
+        <!-- CONVERTER FORM -->
+        <form id="converter">
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Enter amount here" required>
+            </div>
+
+            <div class="form-group">
+                <label for="from">From</label>
+                <select id="from"> <!-- api --> </select>
+            </div>
+            <div class="switch">
+                <i class="fas fa-exchange-alt" id="switch-button" title="Swap currencies"></i>
+            </div>
+            <div class="form-group">
+                <label for="to">To</label>
+                <select id="to"> <!-- api --> </select>
+            </div>
+
+            <button type="submit">Convert</button>
+        </form>
+
+        <div id="result"> <!-- conversion result --> </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
