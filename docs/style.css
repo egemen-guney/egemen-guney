@@ -675,6 +675,7 @@ input::placeholder, textarea::placeholder {
 .resume-btn-content a {
     text-decoration: none;
     color: var(--text-tertiary);
+    width: fit-content;
 }
 
 @media (max-width: 1242px) {
