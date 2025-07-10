@@ -647,6 +647,36 @@ input::placeholder, textarea::placeholder {
     width: 100%;
 }
 
+#resume-btn {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    color: var(--text-tertiary);
+    margin-top: 20px;
+}
+
+#resume-btn:hover {
+    transform: translateY(-7px);
+    color: white;
+    box-shadow: 0 4px 12px rgba(255,0,0, 0.75); 
+}
+
+#resume-btn:active {
+    transform: translateY(0);
+}
+
+.resume-btn-content a {
+    text-decoration: none;
+    color: var(--text-tertiary);
+}
+
 @media (max-width: 1242px) {
     .intro {
         font-size: 2.25rem;
