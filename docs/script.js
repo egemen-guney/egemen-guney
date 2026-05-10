@@ -1,3 +1,5 @@
+let darkmode = localStorage.getItem('darkmode');
+
 const homeButton = document.getElementById("home-btn");
 const aboutButton = document.getElementById("about-btn");
 const projectsButton = document.getElementById("projects-btn");
@@ -5,6 +7,7 @@ const workButton = document.getElementById("work-btn");
 const volButton = document.getElementById("vol-btn");
 const moreButton = document.getElementById("more-btn");
 const contactButton = document.getElementById("contact-btn");
+const themeButton = document.getElementById('theme-switch');
 
 const homeSec = document.getElementById("home");
 const aboutSec = document.getElementById("about");
@@ -95,6 +98,11 @@ contactSubmitButton.addEventListener("click", function(event) {
     }
 });
 
+themeButton.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode');
+    darkmode !== 'active' ? enableDarkmode() : disableDarkmode();
+});
+
 // FUNC.S
 function setActivePage(page) {
     sessionStorage.setItem("activePage", page);
@@ -126,3 +134,15 @@ function sendMsg(nameMsg, emailMsg, phoneMsg, subjectMsg, contentMsg) {
         alert("Unable to send message.\n" + error.text);
     });
 }
+
+const enableDarkmode = () => {
+    document.body.classList.add('darkmode');
+    localStorage.setItem('darkmode', 'active');
+}
+
+const disableDarkmode = () => {
+    document.body.classList.remove('darkmode');
+    localStorage.setItem('darkmode', null);
+}
+
+if (darkmode === 'active') enableDarkmode();

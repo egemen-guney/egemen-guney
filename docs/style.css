@@ -9,15 +9,36 @@
 :root {
     --text-primary: #353535;
     --text-secondary: #666;
+    --text-secondary-btn: #ddd;
     --text-tertiary: #dedede;
     --primary: darkred;
     --secondary: red;
     --background-primary: #cecece;
     --background-secondary: #ddd;
+    --container-background: rgba(206, 206, 206, 0.95);
+    --photo-background: rgba(0, 0, 0, 0.4);
+    --content-background: rgba(255, 255, 255, 0.4);
+    --content-shadow: rgba(0,0,0, 0.4);
+    --input-background: rgba(255, 255, 255, 0.5);
 
     --main-height: calc(100vh - 130px);
     --main-height-600: calc(100vh - 80px);
     --main-height-400: calc(100vh - 106px);
+}
+
+.darkmode {
+    --text-primary: #ffffff;
+    --text-secondary: #dddddd;
+    --text-tertiary: #aaaaaa;
+    --primary: red;
+    --secondary: rgb(255, 50, 50);
+    --background-primary: rgb(25, 25, 25);
+    --background-secondary: rgb(85, 85, 85);
+    --container-background: rgba(50, 50, 50, 0.95);
+    --photo-background: rgba(100, 100, 100, 0.4);
+    --content-background: rgba(125, 125, 125, 0.4);
+    --content-shadow: rgba(100,100,100, 0.4);
+    --input-background: rgba(50, 50, 50, 0.5);
 }
 
 body {
@@ -47,7 +68,7 @@ p.unspaced {
 }
 
 .container {
-    background-color: rgba(206, 206, 206, 0.95);
+    background-color: var(--container-background);
     position: relative;
     overflow: hidden;
     width: 100vw;
@@ -72,6 +93,32 @@ p.unspaced {
     left: 0;
     right: 0;
     z-index: 9999;
+}
+
+#theme-switch {
+    background-color: var(--background-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    padding-right: 10px;
+}
+#theme-switch:hover {
+    cursor: pointer;
+}
+
+#theme-switch img:last-child {
+    display: none;
+}
+#theme-switch img:first-child {
+    display: block;
+}
+.darkmode #theme-switch img:first-child {
+    display: none;
+}
+.darkmode #theme-switch img:last-child {
+    display: block;
 }
 
 .nav-container {
@@ -245,7 +292,7 @@ p.unspaced {
     height: 360px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 16px var(--photo-background);
 }
 
 #about {
@@ -266,7 +313,7 @@ p.unspaced {
 }
 
 .about-content {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--content-background);
     color: var(--text-primary);
     padding: 1rem;
     width: 100%;
@@ -275,7 +322,7 @@ p.unspaced {
     border-radius: 16px;
     line-height: 2rem;
     animation: fadeInUp 0.7s ease;
-    box-shadow: 0 8px 16px rgba(0,0,0, 0.4);
+    box-shadow: 0 8px 16px var(--content-shadow);
 }
 
 #projects {
@@ -297,7 +344,7 @@ p.unspaced {
 }
 
 .project, .vol {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--content-background);
     padding: 1rem;
     width: 100%;
     max-width: 750px;
@@ -387,7 +434,7 @@ p.unspaced {
 }
 
 .job {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--content-background);
     padding: 1rem;
     width: 100%;
     max-width: 750px;
@@ -434,10 +481,10 @@ p.unspaced {
 }
 
 .form-container {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--content-background);
     border-radius: 16px;
     padding: 2rem;
-    box-shadow: 0 8px 16px rgba(0,0,0, 0.4);
+    box-shadow: 0 8px 16px var(--content-shadow);
     animation: fadeInUp 0.7s ease;
 }
 
@@ -481,7 +528,7 @@ p.unspaced {
 #contact input, #contact textarea {
     width: 100%;
     padding: 16px 16px 16px 48px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--input-background);
     border: 2px solid transparent;
     border-radius: 8px;
     color: var(--text-secondary);
@@ -507,7 +554,7 @@ input::placeholder, textarea::placeholder {
 
 #contact-submit-btn {
     background: linear-gradient(45deg, var(--primary), var(--secondary));
-    color: var(--text-tertiary);
+    color: var(--text-secondary-btn);
     border-radius: 8px;
     border: none;
     font-weight: 600;
@@ -569,7 +616,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .more-container {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--content-background);
     color: var(--text-primary);
     /* padding: 1rem; */
     padding: 25px;
@@ -578,7 +625,7 @@ input::placeholder, textarea::placeholder {
     border-radius: 16px;
     line-height: normal;
     animation: fadeInUp 0.7s ease;
-    box-shadow: 0 8px 16px rgba(0,0,0, 0.4);
+    box-shadow: 0 8px 16px var(--content-shadow);
 }
 
 .interests-heading, .summary-heading {
@@ -658,7 +705,7 @@ input::placeholder, textarea::placeholder {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.4s ease;
-    color: var(--text-tertiary);
+    color: var(--text-secondary-btn);
     margin-top: 20px;
 }
 
@@ -674,7 +721,7 @@ input::placeholder, textarea::placeholder {
 
 .resume-btn-content a {
     text-decoration: none;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     width: fit-content;
 }
 
@@ -797,7 +844,7 @@ input::placeholder, textarea::placeholder {
     }
 
     .container {
-        background-color: rgba(206, 206, 206, 0.95);
+        /* background-color: rgba(206, 206, 206, 0.95); */
         position: relative;
         overflow: hidden;
         width: 100vw;
@@ -949,7 +996,7 @@ input::placeholder, textarea::placeholder {
         height: 150px;
         object-fit: cover;
         border-radius: 50%;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); */
     }
 
     #about {
@@ -993,7 +1040,7 @@ input::placeholder, textarea::placeholder {
     }
 
     .project, .vol {
-        background-color: rgba(255, 255, 255, 0.4);
+        /* background-color: rgba(255, 255, 255, 0.4); */
         padding: 1rem;
         width: 100%;
         max-width: 750px;
@@ -1116,7 +1163,7 @@ input::placeholder, textarea::placeholder {
     #contact input, #contact textarea {
         width: 100%;
         padding: 16px 16px 16px 48px;
-        background-color: rgba(255, 255, 255, 0.5);
+        /* background-color: rgba(255, 255, 255, 0.5); */
         border: 2px solid transparent;
         border-radius: 8px;
         color: var(--text-secondary);
@@ -1133,7 +1180,7 @@ input::placeholder, textarea::placeholder {
     #contact input:focus, #contact textarea:focus {
         border-color: var(--primary);
         outline: none;
-        box-shadow: 0 0 0 2px rgba(255,0,0, 0.33); 
+        /* box-shadow: 0 0 0 2px rgba(255,0,0, 0.33); */
     }
 
     #contact-submit-btn {
@@ -1174,7 +1221,7 @@ input::placeholder, textarea::placeholder {
     }
 
     .more-container {
-        background-color: rgba(255, 255, 255, 0.4);
+        /* background-color: rgba(255, 255, 255, 0.4); */
         color: var(--text-primary);
         /* padding: 1rem; */
         padding: 25px;
@@ -1183,7 +1230,7 @@ input::placeholder, textarea::placeholder {
         border-radius: 16px;
         line-height: normal;
         animation: fadeInUp 0.7s ease;
-        box-shadow: 0 8px 16px rgba(0,0,0, 0.4);
+        /* box-shadow: 0 8px 16px rgba(0,0,0, 0.4); */
     }
 
     .interests-heading, .summary-heading {
